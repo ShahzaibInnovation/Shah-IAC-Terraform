@@ -1,0 +1,24 @@
+#Ignore Important Files while committing to Git
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+.terraform/
+*.tfvar
+crash.log
+*.tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+.vscode/
+.idea/
+*.iml
+.DS_Store
+*.log
+mykey.pem
+mykey.pub
+.env
+mykey
+terraform.tfstate.1765606923.backup 
+*.backup
