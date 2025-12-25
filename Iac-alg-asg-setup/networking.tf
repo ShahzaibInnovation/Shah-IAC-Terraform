@@ -10,7 +10,7 @@ resource "aws_subnet" "public" {
   count                   = 2
   vpc_id                  = aws_vpc.prod.id
   cidr_block              = cidrsubnet(var.vpc_cidr, 8, count.index)
-  availability_zone       = element(["us-east-1a", "us-east-1b"], count.index)
+  availability_zone       = element(["ap-southeast-2a", "ap-southeast-2b"], count.index)
   map_public_ip_on_launch = true
   tags = {
     Name = "prod-public-subnet-${count.index}"
@@ -24,7 +24,7 @@ resource "aws_subnet" "private" {
 
   cidr_block = cidrsubnet(var.vpc_cidr, 8, count.index + 10)
 
-  availability_zone = element(["us-east-1a", "us-east-1b"], count.index)
+  availability_zone = element(["ap-southeast-2a", "ap-southeast-2b"], count.index)
   tags = {
     Name = "prod-private-subnet-${count.index}"
   }
