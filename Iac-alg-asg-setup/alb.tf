@@ -6,7 +6,7 @@ resource "aws_lb" "alb" {
 
   subnets = aws_subnet.public[*].id
 
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 }
 resource "aws_lb_target_group" "tg" {
   name = "prod-tg"
