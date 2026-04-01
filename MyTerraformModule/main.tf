@@ -31,7 +31,7 @@ module "Production_InfraApp" {
   hash_key    = "StudentID"
   ami        = "ami-0b8d527345fdace59"
   instance_type = "t3.micro"
-  instance_count = 2
+  instance_count = 1
 
 
 }
